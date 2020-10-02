@@ -1,0 +1,123 @@
+<header>
+  <div class="header bg-dark py-4">
+    <h1 class="text-center fotn-weight-bold text-light">
+      Taller Mecanico Don Alex
+    </h1>
+  </div>
+</header>
+
+<section class="py-4">
+  <div class="container">
+    <h3 class="text-center text-dark pb-2 border-bottom border-dark">
+      Registro de Clientes
+    </h3>
+    <div class="row justify-content-center mt-5">
+      <form #clienteForm="ngForm" class="w-100" (ngSubmit)="onSubmit(clienteForm)">
+       
+        <!-- TO UPDATE -->
+        <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="clienteService.selectedCliente.$key">
+       
+        <div class="form-group row justify-content-center">
+          <input
+            type="text"
+            [(ngModel)]="clienteService.selectedCliente.nombre"
+            name="nombre"
+            #nombre="ngModel"
+            id="nombre"
+            class="form-control w-50"
+            required
+            placeholder="Nombre del Cliente"
+          />
+        </div>
+        <div class="form-group row justify-content-center mt-2">
+          <input
+            type="text"
+            [(ngModel)]="clienteService.selectedCliente.dui"
+            name="dui"
+            #dui = "ngModel"
+            id="dui"
+            class="form-control w-50"
+            required
+            placeholder="DUI"
+          />
+        </div>
+        <div class="form-group row justify-content-center mt-2">
+          <input
+            type="text"
+            [(ngModel)]="clienteService.selectedCliente.vehiculo"
+            #vehiculo = "ngModel"
+            name="vehiculo"
+            id="vehiculo"
+            class="form-control w-50"
+            required
+            placeholder="Vehiculo"
+          />
+        </div>
+        <div class="form-group row justify-content-center mt-2">
+          <input
+            type="text"
+            [(ngModel)]="clienteService.selectedCliente.costo"
+            #costo = "ngModel"
+            name="costo"
+            id="costo"
+            class="form-control w-50"
+            required
+            placeholder="Costo de Reparacion"
+          />
+        </div>
+        <div class="form-group row justify-content-center mt-2">
+          <input
+            type="text"
+            [(ngModel)]="clienteService.selectedCliente.detalle"
+            #detalle = "ngModel"
+            name="detalle"
+            id="detalle"
+            class="form-control w-50"
+            required
+            placeholder="Detalle de la reparación"
+          />
+        </div>
+        <div class="form-group row justify-content-center my-4">
+          <button type="submit" class="btn btn-dark form-control w-25" >
+            Ingresar
+          </button>
+          
+        </div>
+        <div class="form-group row justify-content-center my-4">
+          <button type="reset" class="btn btn-dark form-control w-25" (click)="resetForm(clienteForm)">
+            Borrar
+          </button>
+          
+        </div>
+
+
+      </form>
+      <br />
+
+      <br />
+    </div>
+  </div>
+</section>
+
+<!-- <section class="my-2">
+  <div
+    id="ticket"
+
+    class="container text-center p-3 border w-75 border-dark"
+  >
+    <h2 class="border-bottom border-dark">Ticket</h2>
+    <h6 class="my-4">Taller Mecanico Don Alex</h6>
+    <h6 class="my-4">Detalles</h6>
+    <strong>Cliente: </strong><label class="pr-2">{{ nombre }}</label>
+    <strong>DUI: </strong><label class="pl-2">{{ dui }}</label> <br />
+    <strong>Vehiculo: </strong><label class="">{{ vehiculo }}</label>
+    <br />
+    <strong>Reparacion: </strong><label class="">{{ detalle }}</label>
+    <br />
+    <strong>Precio: $</strong><label class="pr-2">{{ costo }}</label>
+    <strong>Descuento: $</strong><label class="pl-2"> descuento </label>
+    <br />
+    <strong>Total a pagar: $</strong><label class=""> total </label> <br />
+    <label class="mt-5">San Salvador, El Salvador,  fecha </label>
+  </div>
+</section> -->
