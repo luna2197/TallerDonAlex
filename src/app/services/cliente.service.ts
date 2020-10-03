@@ -23,7 +23,7 @@ export class ClienteService {
   getClientes() { // guarda los elementos en la varible 'clientes'
     return this.clienteList = this.firebase.list('clientes');
   }
-
+  
   // crear un nuevo cliente  , recibiendo un parametro de tipo cliente
   insertCliente(cliente: Cliente) {
     // agregar un dato al final de la lista, como recibe un objeto del tipo cliente , puede acceder a sus propiedades

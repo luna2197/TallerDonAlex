@@ -35,8 +35,8 @@ export class ListaClientesComponent implements OnInit {
      por que se necesita para luego eliminar el registro
      x["$key"] = element.key;
   
-     Cuando ya se tiene el elemento se asigna a mi arreglo 'productList' para ser mostrado en mi pantalla list
-     this.productList.push(x as Product);
+     Cuando ya se tiene el elemento se asigna a mi arreglo 'clienteList' para ser mostrado en mi pantalla list
+     this.cleinteList.push(x as Cliente);
   */
  ngOnInit() {
   return this.clienteService.getClientes()
@@ -51,8 +51,8 @@ export class ListaClientesComponent implements OnInit {
 }
 
 /* 
- Recibe una varible de tipo 'Product' para invocar el servicio de firebase, para actualizarlo
- Para no ocupar el doble enlace de datos ' [(ngModel)]' , se va utilizar 'Object.assign({}, product)'  
+ Recibe una varible de tipo 'Cliente' para invocar el servicio de firebase, para actualizarlo
+ Para no ocupar el doble enlace de datos ' [(ngModel)]' , se va utilizar 'Object.assign({}, cliente)'  
 */
 onEdit(cliente: Cliente) {
   this.clienteService.selectedCliente = Object.assign({}, cliente);
@@ -65,7 +65,7 @@ onEdit(cliente: Cliente) {
 onDelete($key: string) {
   if (confirm('Are you sure you want to delete it?')) {
     this.clienteService.deleteCliente($key);
-    this.toastr.warning('Deleted Successfully', 'Product Removed');
+    this.toastr.warning('Deleted Successfully', 'Client Removed');
   }
 }
 
