@@ -110,28 +110,31 @@
     </div>
   </div>
 </section>
-<app-lista-clientes></app-lista-clientes>
+
    
 
-<!-- <section class="my-2">
+ <section class="my-2">
   <div
     id="ticket"
 
     class="container text-center p-3 border w-75 border-dark"
   >
     <h2 class="border-bottom border-dark">Ticket</h2>
-    <h6 class="my-4">Taller Mecanico Don Alex</h6>
+    <h6 class="my-4">Veterina Lissette</h6>
     <h6 class="my-4">Detalles</h6>
-    <strong>Cliente: </strong><label class="pr-2">{{ nombre }}</label>
-    <strong>DUI: </strong><label class="pl-2">{{ dui }}</label> <br />
-    <strong>Vehiculo: </strong><label class="">{{ vehiculo }}</label>
+    <strong>Cliente: </strong><label class="pr-2">{{ clienteForm.value.nombre }}</label>
+    <strong>DUI: </strong><label class="pl-2">{{ clienteForm.value.dui }}</label> <br />
+    <strong>Nombre de mascota: </strong><label class="">{{ clienteForm.value.mascota }}</label>
     <br />
-    <strong>Reparacion: </strong><label class="">{{ detalle }}</label>
+    <strong>Tratamiento: </strong><label class="">{{ clienteForm.value.tratamiento }}</label>
     <br />
-    <strong>Precio: $</strong><label class="pr-2">{{ costo }}</label>
-    <strong>Descuento: $</strong><label class="pl-2"> descuento </label>
+    <strong>Medicamento: </strong><label class="pr-2">{{ clienteForm.value.medicamento }}</label>
+    <strong>Costo: $</strong><label class="pl-2"> {{ clienteForm.value.costo }} </label>
     <br />
-    <strong>Total a pagar: $</strong><label class=""> total </label> <br />
+    <strong>Descuento: $</strong><label class="pl-2"> {{  }} </label>
+    <strong>Total a pagar: $</strong><label class=""> {{ }} </label> <br />
     <label class="mt-5">San Salvador, El Salvador,  fecha </label>
   </div>
-</section> -->
+</section> 
+
+<app-lista-clientes></app-lista-clientes>
