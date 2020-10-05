@@ -1,0 +1,56 @@
+  
+<div class="container pt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+
+          <div class="card rounded-0 p-3">
+            <div class="card-header">
+              <h3 class="mb-0 text-center">Sign Up</h3>
+              <img src="https://media.istockphoto.com/vectors/vet-cartoon-character-vector-id1138852534?b=1&k=6&m=1138852534&s=170667a&h=YlOMISqwJMXFOM6vHXkeBsv7g3m8VTn_3F9KdV2Ll9U=" class="mx-auto d-block my-3 w-50" alt="" srcset="">
+            </div>
+            <div class="displayTable">
+              <div class="displayTableCell">
+                <div class="authBlock">
+  
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email Address" #userEmail required>
+        </div>
+  
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" #userPwd required>
+        </div>
+  
+        <div class="form-group row justify-content-center">
+          <input type="button" class="btn btn-success btn-l" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+        </div>
+  
+        <div class="form-group row justify-content-center">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+  
+        <!-- Continue with Google -->
+        <div class="form-group row justify-content-center">
+          <button type="button" class="btn btn-primary btn-lg" (click)="authService.GoogleAuth()">
+            <i class="fab fa-google-plus-g"></i>
+            Continue with Google
+          </button>
+        </div>
+
+      </div>
+  
+      <div class="redirectToLogin row justify-content-center">
+        <span>Already have an account? <span class="redirect" routerLink="/sign-in">Log In</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+<!--/row-->
+</div>
+<!--/col-->
+</div>

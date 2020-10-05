@@ -1,42 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
-// firebase
-import { environment } from '../environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
+//Firebase services + enviroment module
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { environment } from "../environments/environment";
+import { AuthService } from './services/auth.service';
 
-import { ClientesComponent } from './componets/clientes/clientes.component';
-import { ListaClientesComponent } from './componets/clientes/lista-clientes/lista-clientes.component';
-import { ClienteComponent } from './componets/clientes/cliente/cliente.component';
-
-//servicio
-import { ClienteService } from './services/cliente.service';
-
-//toastr
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
- 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientesComponent,
-    ListaClientesComponent,
-    ClienteComponent
+    DashboardComponent,
+    SignInComponent,
+    SignUpComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    FormsModule,
-    ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
-  providers: [
-    ClienteService
-  ],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

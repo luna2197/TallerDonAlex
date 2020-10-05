@@ -4,16 +4,16 @@
 
 export const environment = {
   production: false,
-  firebase:{
-  apiKey: "AIzaSyDLTZZz_UhMQQ-y_l6fuh17yUJIHQTtkAI",
-  authDomain: "tallermecanicodonalex.firebaseapp.com",
-  databaseURL: "https://tallermecanicodonalex.firebaseio.com",
-  projectId: "tallermecanicodonalex",
-  storageBucket: "tallermecanicodonalex.appspot.com",
-  messagingSenderId: "890893506244",
-  appId: "1:890893506244:web:31517acfe82b4f917b9b91",
-  measurementId: "G-0KB522JJXE"
-}
+  firebase: {
+    apiKey: "AIzaSyBwx19XpOo8yv0WVG4PTbrM5yiigXgsF5c",
+    authDomain: "workshop-alex.firebaseapp.com",
+    databaseURL: "https://workshop-alex.firebaseio.com",
+    projectId: "workshop-alex",
+    storageBucket: "workshop-alex.appspot.com",
+    messagingSenderId: "717371806868",
+    appId: "1:717371806868:web:2ea392677b57b9f86d1081",
+    measurementId: "G-TWSH57Y2QZ"
+  }
 };
 
 /*
