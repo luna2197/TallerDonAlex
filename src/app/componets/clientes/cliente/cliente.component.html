@@ -44,13 +44,37 @@
         <div class="form-group row justify-content-center mt-2">
           <input
             type="text"
-            [(ngModel)]="clienteService.selectedCliente.vehiculo"
-            #vehiculo = "ngModel"
-            name="vehiculo"
-            id="vehiculo"
+            [(ngModel)]="clienteService.selectedCliente.mascota"
+            #mascota = "ngModel"
+            name="mascota"
+            id="mascota"
             class="form-control w-50"
             required
-            placeholder="Vehiculo"
+            placeholder="Nombre de la Mascota"
+          />
+        </div>
+        <div class="form-group row justify-content-center mt-2">
+          <input
+            type="text"
+            [(ngModel)]="clienteService.selectedCliente.tratamiento"
+            #tratamiento = "ngModel"
+            name="tratamiento"
+            id="tratamiento"
+            class="form-control w-50"
+            required
+            placeholder="Tratamiento"
+          />
+        </div>
+        <div class="form-group row justify-content-center mt-2">
+          <input
+            type="text"
+            [(ngModel)]="clienteService.selectedCliente.medicamento"
+            #medicamento = "ngModel"
+            name="medicamento"
+            id="medicamento"
+            class="form-control w-50"
+            required
+            placeholder="Medicamento Recetado"
           />
         </div>
         <div class="form-group row justify-content-center mt-2">
@@ -62,19 +86,7 @@
             id="costo"
             class="form-control w-50"
             required
-            placeholder="Costo de Reparacion"
-          />
-        </div>
-        <div class="form-group row justify-content-center mt-2">
-          <input
-            type="text"
-            [(ngModel)]="clienteService.selectedCliente.detalle"
-            #detalle = "ngModel"
-            name="detalle"
-            id="detalle"
-            class="form-control w-50"
-            required
-            placeholder="Detalle de la reparación"
+            placeholder="Costo"
           />
         </div>
         <div class="form-group row justify-content-center my-4">
@@ -98,6 +110,8 @@
     </div>
   </div>
 </section>
+<app-lista-clientes></app-lista-clientes>
+   
 
 <!-- <section class="my-2">
   <div

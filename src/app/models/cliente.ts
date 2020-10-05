@@ -2,8 +2,9 @@ export class Cliente {
     $key: string;
     nombre: string;
     dui: string;
-    vehiculo: string;
+    mascota: string;
     costo: number;
-    detalle: string;
+    tratamiento: string;
+    medicamento: string;
 
 }

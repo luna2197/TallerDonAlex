@@ -5,6 +5,7 @@ import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from "@angular/router";
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -37,7 +38,7 @@ export class AuthService {
   SignIn(email, password) {
     return this.afAuth.signInWithEmailAndPassword(email, password).then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['../componets/clientes/cliente/cliente.component']);
         });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -104,7 +105,8 @@ export class AuthService {
     return this.afAuth.signInWithPopup(provider)
     .then((result) => {
        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['cliente']);
+          
         })
       this.SetUserData(result.user);
     }).catch((error) => {

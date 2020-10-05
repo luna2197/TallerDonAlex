@@ -30,9 +30,10 @@ export class ClienteService {
     this.clienteList.push({
       nombre: cliente.nombre,
       dui: cliente.dui,
-      vehiculo: cliente.vehiculo,
-      costo: cliente.costo,
-      detalle: cliente.detalle
+      mascota: cliente.mascota,
+      tratamiento: cliente.tratamiento,
+      medicamento: cliente.medicamento,      
+      costo: cliente.costo
     });
   }
 
@@ -42,9 +43,10 @@ export class ClienteService {
     this.clienteList.update(cliente.$key, {
       nombre: cliente.nombre,
       dui: cliente.dui,
-      vehiculo: cliente.vehiculo,
-      costo: cliente.costo,
-      detalle: cliente.detalle
+      mascota: cliente.mascota,
+      tratamiento: cliente.tratamiento,
+      medicamento: cliente.medicamento,      
+      costo: cliente.costo
     });
   }
 

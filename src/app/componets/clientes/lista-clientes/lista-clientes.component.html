@@ -7,22 +7,22 @@
             <tr>
               <th scope="col">Nombre</th>
               <th scope="col">DUI</th>
-              <th scope="col">Vehiculo</th>
-              <th scope="col">Detalle de Reparacion</th>
-              <th scope="col">Precio</th>
-              <th scope="col">Descuento</th>
+              <th scope="col">Mascota</th>
+              <th scope="col">Tratamiento</th>
+              <th scope="col">Medicamento</th>
+              <th scope="col">Costo</th>
               <th scope="col">Visita</th>
-              <th scope="col">ID</th>
+              <th scope="col">Descuento</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let cliente of clienteList">
               <th scope="row">{{ cliente.nombre }}</th>
               <td>{{ cliente.dui }}</td>
-              <td>{{ cliente.vehiculo }}</td>
-              <td>{{ cliente.detalle }}</td>
+              <td>{{ cliente.mascota }}</td>
+              <td>{{ cliente.tratamiento }}</td>
+              <td>{{ cliente.medicamento }}</td>
               <td>{{ cliente.costo }}</td>
-              <td>{{ cliente.descuento }}</td>
               <td>{{ cliente.total }}</td>
               <td>{{ cliente.$key }}</td>
               <td>

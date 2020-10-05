@@ -8,6 +8,11 @@ import { ClienteService } from '../../../services/cliente.service';
 import { Cliente } from '../../../models/cliente';
 // toastr
 import { ToastrService } from 'ngx-toastr';
+
+//Service
+import { AuthService } from "../../../services/auth.service";
+
+
 @Component({
   selector: 'app-cliente',
   templateUrl: './cliente.component.html',
@@ -17,7 +22,8 @@ export class ClienteComponent implements OnInit {
 
   constructor(
     public clienteService: ClienteService,
-    public toastr: ToastrService
+    public toastr: ToastrService,
+    public authService: AuthService
   ) { }
 
   ngOnInit(): void {
