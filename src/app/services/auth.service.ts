@@ -38,7 +38,7 @@ export class AuthService {
   SignIn(email, password) {
     return this.afAuth.signInWithEmailAndPassword(email, password).then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['../componets/clientes/cliente/cliente.component']);
+          this.router.navigate(['dashboard']);
         });
         this.SetUserData(result.user);
       }).catch((error) => {
@@ -105,7 +105,7 @@ export class AuthService {
     return this.afAuth.signInWithPopup(provider)
     .then((result) => {
        this.ngZone.run(() => {
-          this.router.navigate(['cliente']);
+          this.router.navigate(['dashboard']);
           
         })
       this.SetUserData(result.user);
@@ -141,6 +141,11 @@ export class AuthService {
     })
   }
 
+    //registro
+    registro() {
+        this.router.navigate(['cliente']);
+      
+    }
 
 
 }

@@ -1,54 +1,37 @@
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-      <img class="brand-logo" src="" alt="Logo">
-    </a>
+ <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" (click)="authService.SignOut()">Log Out</a>
+        </li>
+      </ul>
+    </div>
   </nav>
   
   <!-- Sidebar navigation -->
-  <div class="container-fluid">
+  <div class="container mt-5">
+    <h1 class="font-weight-bold text-center">User Profile</h1>
+  </div>
+  <div class="container-fluid mt-1 row justify-content-center">
     <div class="row">
-  
-      <nav class="col-md-2 d-md-block bg-light sidebar">
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active">
-                <i class="fas fa-user"></i>User Profile
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active">
-                <i class="fas fa-prescription"></i>Student
-              </a>
-            </li>
-            <!-- Calling SignOut() Api from AuthService -->
-            <li class="nav-item">
-              <a class="nav-link" (click)="authService.SignOut()">
-                <i class="fas fa-sign-out-alt"></i>Log out
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-  
       <!-- Main content -->
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10">
         <div class="inner-adjust">
-  
-          <div class="pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">User Profile</h1>
-          </div>
           <!-- Show user data when logged in -->
-          <div class="row" *ngIf="authService.userData as user">
+          <div class="row justify-content-center" *ngIf="authService.userData as user">
             <div class="col-md-12">
               <div class="media">
-                <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+                <img class="align-self-start mr-5 img-fluid rounded-circle w-25 p-5" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
                   alt="{{user.displayName}}">
-                <div class="media-body">
+                <div class="media-body my-5">
                   <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
-                  <p>User ID: <strong>{{user.uid}}</strong></p>
                   <p>Email: <strong>{{user.email}}</strong></p>
-                  <p>Email Verified: <strong>{{user.emailVerified}}</strong></p>
+                  <div class="form-group">
+                    <input type="submit" (click)="authService.registro()" class="form-control w-75 btn btn-success" value="Registrar Cliente" placeholder="Registrar Cliente" #registrocliente>
+                  </div>
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ export class ClienteService {
 
   // Traer los datos de firebase
   clienteList: AngularFireList<any>;
-
+  
   // Una variable temporal, para guardar los datos seleccionados, del tipo Cliente
   selectedCliente: Cliente = new Cliente();
 
@@ -21,6 +21,7 @@ export class ClienteService {
 
   // Traer todos los productos desde firebase 
   getClientes() { // guarda los elementos en la varible 'clientes'
+  
     return this.clienteList = this.firebase.list('clientes');
   }
   
