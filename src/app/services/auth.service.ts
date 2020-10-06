@@ -141,6 +141,11 @@ export class AuthService {
     })
   }
 
+    //registro
+    registro() {
+        this.router.navigate(['cliente']);
+      
+    }
 
 
 }

@@ -30,7 +30,7 @@
                   <h1>Hello: <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
                   <p>Email: <strong>{{user.email}}</strong></p>
                   <div class="form-group">
-                    <input type="submit" OnSubmit="cliente" class="form-control w-75 btn btn-success" value="Registrar Cliente" placeholder="Registrar Cliente" #registrocliente>
+                    <input type="submit" (click)="authService.registro()" class="form-control w-75 btn btn-success" value="Registrar Cliente" placeholder="Registrar Cliente" #registrocliente>
                   </div>
                 </div>
               </div>
