@@ -3,16 +3,17 @@
     <div class="d-flex justify-content-center">
       <div class="table-responsive w-75">
         <table class="table text-center">
-          <thead class="thead-dark">
+          <thead class="bg-primary">
             <tr>
-              <th scope="col">Nombre</th>
-              <th scope="col">DUI</th>
-              <th scope="col">Mascota</th>
-              <th scope="col">Tratamiento</th>
-              <th scope="col">Medicamento</th>
-              <th scope="col">Costo</th>
-              <th scope="col">Visita</th>
-              <th scope="col">Descuento</th>
+              <th scope="col" class="text-white">Nombre</th>
+              <th scope="col" class="text-white">DUI</th>
+              <th scope="col" class="text-white">Mascota</th>
+              <th scope="col" class="text-white">Tratamiento</th>
+              <th scope="col" class="text-white">Medicamento</th>
+              <th scope="col" class="text-white">Costo</th>
+              <th scope="col" class="text-white">Visita</th>
+              <th scope="col" class="text-white">Descuento</th>
+              <th scope="col" class="text-white">Opciones</th>
             </tr>
           </thead>
           <tbody>
@@ -24,13 +25,13 @@
               <td>{{ cliente.medicamento }}</td>
               <td>{{ cliente.costo }}</td>
               <td>{{ cliente.total }}</td>
-              <td>{{ cliente.$key }}</td>
+              <td></td>
               <td>
                 <a class="btn btn-secondary text-white" (click)="onEdit(cliente)">
-                    <i class="far fa-edit"></i>
+                    <i class="far fa-edit">⟲</i>
                 </a>
                 <a class="btn btn-danger text-white" (click)="onDelete(cliente.$key)">
-                    <i class="fas fa-trash-alt"></i>
+                    <i class="fas fa-trash-alt">X</i>
                 </a>
             </td>
             </tr>
